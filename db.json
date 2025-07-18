@@ -4,7 +4,7 @@
       "id": "dd30",
       "name": "asdasd",
       "budget": "123123",
-      "cartegory": {
+      "category": {
         "id": "2",
         "name": "Desenvolvimento"
       },
@@ -15,7 +15,7 @@
       "id": "f073",
       "name": "asdasd",
       "budget": "123123",
-      "cartegory": {
+      "category": {
         "id": "2",
         "name": "Desenvolvimento"
       },
@@ -26,7 +26,7 @@
       "id": "9e85",
       "name": "asdasd",
       "budget": "123123",
-      "cartegory": {
+      "category": {
         "id": "2",
         "name": "Desenvolvimento"
       },
@@ -37,7 +37,7 @@
       "id": "a718",
       "name": "asdasd",
       "budget": "123123",
-      "cartegory": {
+      "category": {
         "id": "Selecione uma opção",
         "name": "Selecione uma opção"
       },
@@ -48,7 +48,7 @@
       "id": "0e17",
       "name": "asdasd",
       "budget": "123123",
-      "cartegory": {
+      "category": {
         "id": "4",
         "name": "Planejamento"
       },
@@ -59,7 +59,7 @@
       "id": "9fbd",
       "name": "projetinho",
       "budget": "10000",
-      "cartegory": {
+      "category": {
         "id": "2",
         "name": "Desenvolvimento"
       },
@@ -70,7 +70,7 @@
       "id": "755a",
       "name": "projetinho",
       "budget": "10000",
-      "cartegory": {
+      "category": {
         "id": "2",
         "name": "Desenvolvimento"
       },
@@ -81,7 +81,7 @@
       "id": "76c0",
       "name": "teste1",
       "budget": "1",
-      "cartegory": {
+      "category": {
         "id": "1",
         "name": "Infra"
       },
@@ -97,7 +97,7 @@
     },
     {
       "id": "7475",
-      "cartegory": {
+      "category": {
         "id": "2",
         "name": "Desenvolvimento"
       },
@@ -110,7 +110,7 @@
       "id": "8543",
       "name": "123123",
       "budget": "1213123",
-      "cartegory": {
+      "category": {
         "id": "1",
         "name": "Infra"
       },
@@ -121,7 +121,7 @@
       "id": "ea1f",
       "name": "Lucas Yuki Yanagui",
       "budget": "123123",
-      "cartegory": {
+      "category": {
         "id": "2",
         "name": "Desenvolvimento"
       },
@@ -132,7 +132,7 @@
       "id": "6d7c",
       "name": "oii",
       "budget": "123",
-      "cartegory": {
+      "category": {
         "id": "2",
         "name": "Desenvolvimento"
       },
@@ -143,7 +143,7 @@
       "id": "57a3",
       "name": "asdsad",
       "budget": "13412",
-      "cartegory": {
+      "category": {
         "id": "2",
         "name": "Desenvolvimento"
       },
@@ -154,7 +154,7 @@
       "id": "13d6",
       "name": "sad",
       "budget": "41241",
-      "cartegory": {
+      "category": {
         "id": "1",
         "name": "Infra"
       },
@@ -165,7 +165,7 @@
       "id": "b789",
       "name": "1213",
       "budget": "412412412",
-      "cartegory": {
+      "category": {
         "id": "2",
         "name": "Desenvolvimento"
       },

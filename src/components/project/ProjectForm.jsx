@@ -34,8 +34,8 @@ function ProjectForm({handleSubmit, btnText, projectData}){
         setProject({ ...project,[e.target.name]: e.target.value })
     }
 
-    function handleCartegory(e){
-        setProject({ ...project, cartegory:{
+    function handleCategory(e){
+        setProject({ ...project, category:{
             id: e.target.value,
                 name: e.target.options[e.target.selectedIndex].text,
             },
@@ -63,9 +63,9 @@ function ProjectForm({handleSubmit, btnText, projectData}){
                 />
             </div>
             <div>
-                <Select name="category_id" text="Selecione a cartegoria" options={categories}
-                        handleOnChange={handleCartegory}
-                        value={project.cartegory ? project.cartegory.id : ""}
+                <Select name="category_id" text="Selecione a categoria" options={categories}
+                        handleOnChange={handleCategory}
+                        value={project.category ? project.category.id : ""}
                 />
             </div>
             <div>
