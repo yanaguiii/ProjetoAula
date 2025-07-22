@@ -7,6 +7,7 @@ import Container from "./components/layout/Container.jsx";
 import Navbar from "./components/layout/Navbar.jsx";
 import Footer from "./components/layout/Footer.jsx";
 import NewProject from "./components/pages/NewProject.jsx";
+import Project from "./components/pages/Project.jsx"
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
                         <Route path="/contato" element={<Contato/>} />
                         <Route path="/projects" element={<Projects/>} />
                         <Route path="/newproject" element={<NewProject/>}/>
+                        <Route path="/project/:id" element={<Project/>}/>
 
                     </Routes>
             </Container>

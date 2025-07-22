@@ -1,72 +1,6 @@
 {
   "projects": [
     {
-      "id": "dd30",
-      "name": "asdasd",
-      "budget": "123123",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "f073",
-      "name": "asdasd",
-      "budget": "123123",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "9e85",
-      "name": "asdasd",
-      "budget": "123123",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "a718",
-      "name": "asdasd",
-      "budget": "123123",
-      "category": {
-        "id": "Selecione uma opção",
-        "name": "Selecione uma opção"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "0e17",
-      "name": "asdasd",
-      "budget": "123123",
-      "category": {
-        "id": "4",
-        "name": "Planejamento"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "9fbd",
-      "name": "projetinho",
-      "budget": "10000",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
       "id": "755a",
       "name": "projetinho",
       "budget": "10000",
@@ -78,96 +12,34 @@
       "services": []
     },
     {
-      "id": "76c0",
-      "name": "teste1",
-      "budget": "1",
+      "id": "c4a7",
+      "name": "project A",
       "category": {
         "id": "1",
         "name": "Infra"
       },
+      "budget": "12",
       "cost": 0,
       "services": []
     },
     {
-      "id": "11cd",
-      "name": "Lucas Yuki Yanagui",
-      "budget": "123",
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "7475",
+      "id": "b4f1",
       "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
+        "id": "3",
+        "name": "Design"
       },
-      "budget": "123",
-      "name": "22222",
+      "name": "UX",
+      "budget": "1455",
       "cost": 0,
       "services": []
     },
     {
-      "id": "8543",
-      "name": "123123",
-      "budget": "1213123",
+      "id": "a623",
+      "name": "token meu",
+      "budget": "1222",
       "category": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "ea1f",
-      "name": "Lucas Yuki Yanagui",
-      "budget": "123123",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "6d7c",
-      "name": "oii",
-      "budget": "123",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "57a3",
-      "name": "asdsad",
-      "budget": "13412",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "13d6",
-      "name": "sad",
-      "budget": "41241",
-      "category": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "b789",
-      "name": "1213",
-      "budget": "412412412",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
+        "id": "4",
+        "name": "Planejamento"
       },
       "cost": 0,
       "services": []
