@@ -7,7 +7,7 @@ import SubmitButton from "../form/SubmitButton.jsx";
 
 function ProjectForm({handleSubmit, btnText, projectData}){
     const[categories, setCategories] = useState([])
-    const[project, setProject] = useState([])
+    const [project, setProject] = useState(projectData || {});
 
     useEffect(() => {
         fetch("http://localhost:5050/categories", {

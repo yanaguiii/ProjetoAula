@@ -29,20 +29,45 @@
         "name": "Design"
       },
       "name": "UX",
-      "budget": "1455",
+      "budget": "1300",
       "cost": 0,
       "services": []
     },
     {
       "id": "a623",
-      "name": "token meu",
-      "budget": "1222",
+      "name": "token meu atualizado",
+      "budget": "100",
       "category": {
-        "id": "4",
-        "name": "Planejamento"
+        "id": "3",
+        "name": "Design"
       },
-      "cost": 0,
-      "services": []
+      "cost": 90,
+      "services": [
+        {
+          "cost": "40",
+          "name": "Custo novo",
+          "description": "Servico",
+          "id": "1b03ba99-57df-4c27-8b19-0e4d937dc5fc"
+        },
+        {
+          "cost": "20",
+          "name": "Custo novo",
+          "description": "Servico",
+          "id": "89a3c409-896d-43e2-aad5-8fce5340454f"
+        },
+        {
+          "name": "Lucas Yuki Yanagui",
+          "cost": "10",
+          "description": "Servico",
+          "id": "ac45962e-a97e-4aeb-8c91-b7e66c629042"
+        },
+        {
+          "name": "Lucas",
+          "cost": "20",
+          "description": "Servico",
+          "id": "9b5f722e-6cf8-4ce7-8fac-1f5d7f14b712"
+        }
+      ]
     }
   ],
   "categories": [
