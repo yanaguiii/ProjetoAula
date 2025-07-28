@@ -8,8 +8,7 @@ function ServiceForm({handleSubmit, btnText, projectData}){
 
     function submit(e){
         e.preventDefault()
-        projectData.services.push(service)
-        handleSubmit(projectData)
+        handleSubmit(service)
     }
 
     function handleChange(e){

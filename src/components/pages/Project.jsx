@@ -6,6 +6,8 @@ import Container from "../layout/Container.jsx";
 import ProjectForm from "../project/ProjectForm.jsx";
 import Message from "../layout/Message.jsx";
 import ServiceForm from "../service/ServiceForm.jsx";
+import ServiceCard from "../service/ServiceCard.jsx";
+
 
 import {parse, v4 as uuidv4} from "uuid"
 
@@ -19,6 +21,7 @@ function Project(){
 
     const [message,setMessage] = useState("")
     const [type,setType] = useState("")
+    const [services,setServices] = useState([])
 
 
 
@@ -33,6 +36,7 @@ function Project(){
                 .then(resp => resp.json())
                 .then((data) => {
                     setProject(data)
+                    setServices(data.services)
                 })
                 .catch(err => console.log(err))
             },300)
@@ -46,35 +50,68 @@ function Project(){
         setShowServiceForm(!showServiceForm)
     }
 
-    function createService(project){
-        setMessage("")
-        const lastService = project.services[project.services.length - 1]
+    function createService(service) { // 1. A função agora recebe o NOVO serviço do formulário
+        setMessage("");
 
-        lastService.id = uuidv4()
+        // 2. Crie um novo objeto de serviço com um ID único
+        const newService = {
+            ...service,
+            id: uuidv4(),
+        };
 
-        const lastServiceCost = lastService.cost
-        const newCost = parseFloat(project.cost) + parseFloat(lastServiceCost)
+        // 3. Crie uma CÓPIA atualizada do projeto
+        const updatedProject = { ...project };
+        updatedProject.services = [...project.services, newService];
 
-        if(newCost> parseFloat(project.budget)){
-            setMessage("Orçamento ultrapassado, verifique o valor do serviço")
-            setType("error")
-            project.services.pop()
-            return false
+        // 4. Valide o orçamento com base na CÓPIA
+        const newCost = parseFloat(updatedProject.cost) + parseFloat(newService.cost);
+
+        if (newCost > parseFloat(updatedProject.budget)) {
+            setMessage("Orçamento ultrapassado, verifique o valor do serviço");
+            setType("error");
+            // Não precisa mais do .pop(), pois ainda não alteramos o estado principal
+            return false;
         }
 
-        project.cost = newCost
+        updatedProject.cost = newCost;
 
-        fetch(`http://localhost:5050/projects/${project.id}`, {
+        // 5. Envie a CÓPIA atualizada para a API
+        fetch(`http://localhost:5050/projects/${updatedProject.id}`, {
             method: 'PATCH',
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(project)
+            body: JSON.stringify(updatedProject)
         })
             .then(resp => resp.json())
             .then((data) => {
-                //exibir o servico
-                console.log(data)
+                // 6. ATUALIZE O ESTADO com a cópia final
+                setProject(data);
+                setServices(data.services); // Garante que os serviços na tela também atualizem
+                setShowServiceForm(false); // Fecha o formulário
+            })
+            .catch(err => console.log(err));
+    }
+
+    function removeService(id,cost){
+        const servicesUpdate = project.services.filter((service) => service.id !== id)
+        const projectUpdated = project
+        projectUpdated.services = servicesUpdate;
+        projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost);
+
+        fetch(`http://localhost:5050/projects/${projectUpdated.id}`,{
+            method:"PATCH",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(projectUpdated),
+        })
+            .then(resp => resp.json())
+            .then((data) => {
+                setProject(projectUpdated)
+                setServices(servicesUpdate)
+                setMessage("Serviço removido com sucesso!")
+                setType("success")
             })
             .catch(err => console.log(err))
     }
@@ -153,7 +190,19 @@ function Project(){
                         </div>
                         <h2>Servicos</h2>
                         <Container customClass="start">
-                            <p>Itens de serviços</p>
+                            {services.length > 0 &&
+                                services.map((service) => (
+                                    <ServiceCard
+                                    id={service.id}
+                                    name={service.name}
+                                    cost={service.cost}
+                                    description={service.description}
+                                    key={service.key}
+                                    handleRemove={removeService}
+                                    />
+                                ))
+                            }
+                            {services.length === 0 && <p>Não há serviços cadastrados.</p>}
                         </Container>
                     </Container>
                 </div>
